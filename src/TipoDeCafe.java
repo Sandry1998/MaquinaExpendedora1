@@ -1,5 +1,5 @@
 public enum TipoDeCafe {
-    Cafe_Con_Leche(1.20),
+    CAFE_CON_LECHE(1.20),
     SOLO(1.00),
     SOLO_AMERICANO(1.10),
     CORTADO(1.10),
