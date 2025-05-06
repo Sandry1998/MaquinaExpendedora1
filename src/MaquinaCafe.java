@@ -1,5 +1,8 @@
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public class MaquinaCafe {
     private ArrayList<Cafe> historialVentas;
@@ -44,10 +47,13 @@ public class MaquinaCafe {
     }
     public void mostrarHistorial(){
         double totalVentas = 0;
-        for(Cafe cafe : historialVentas){
+        System.out.println("\nHistorial de Ventas");
+        for(Cafe cafe : historialVentas) {
+            historialVentas.add(cafe);
             System.out.println(cafe);
             totalVentas += cafe.getPrecio();
         }
+        //tenemos creado el historial..ahora creamos una coleccion que no tenga repetidos...
         System.out.println("Total de ventas: " + totalVentas + "€");
     }
     private String formatearNombre(TipoDeCafe tipo){

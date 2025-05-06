@@ -13,6 +13,7 @@ public class Cafe {
         return tipo.getPrecio();
     }
 
+
     @Override
     public String toString() {
         return "Café: " + tipo;
