@@ -48,7 +48,7 @@ public class MaquinaCafe {
             System.out.println(cafe);
             totalVentas += cafe.getPrecio();
         }
-        System.out.println("Total de ventas: " + totalVentas);
+        System.out.println("Total de ventas: " + totalVentas + "€");
     }
     private String formatearNombre(TipoDeCafe tipo){
         return tipo.name().toLowerCase().replace("_"," ");
