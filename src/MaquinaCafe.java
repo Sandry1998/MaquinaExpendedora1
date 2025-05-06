@@ -48,10 +48,15 @@ public class MaquinaCafe {
     public void mostrarHistorial(){
         double totalVentas = 0;
         System.out.println("\nHistorial de Ventas");
+        int[] contador = new int[TipoDeCafe.values().length];
         for(Cafe cafe : historialVentas) {
-            historialVentas.add(cafe);
-            System.out.println(cafe);
+            contador[cafe.getTipo().ordinal()]++;
             totalVentas += cafe.getPrecio();
+        }
+        for(int i = 0; i < TipoDeCafe.values().length; i++){
+            TipoDeCafe tipo = TipoDeCafe.values()[contador[i]];
+            System.out.println("%-20s: %2d Unidades Vendidas (%.2f €)%n",formatearNombre(tipo).toUpperCase()
+                    ,contador[i]* tipo.getPrecio());
         }
         //tenemos creado el historial..ahora creamos una coleccion que no tenga repetidos...
         System.out.println("Total de ventas: " + totalVentas + "€");
